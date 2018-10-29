@@ -1,20 +1,25 @@
+/**
+ * @author Daniel Nucci - 100655384
+ * @version October 13th, 2018
+ */
+
 package assignments.Assignment1;
 
 public class IsTriangle {
 
 	public static void main(String[] args) {
 		//build line one
-		Point p1 = new Point();
-		Point p2 = new Point(0, 10);
-		Line line1 =new Line(p1, p2);
+		Point p1 	= new Point();
+		Point p2 	= new Point(0, 10);
+		Line line1 	= new Line(p1, p2);
 		//build line two
-		Point p3 = new Point();
-		Point p4 = new Point(10, 0);
-		Line line2 =new Line(p3, p4);
+		Point p3 	= new Point();
+		Point p4 	= new Point(10, 0);
+		Line line2 	= new Line(p3, p4);
 		//build line three
-		Point p5 = new Point(0, 10);
-		Point p6 = new Point(10, 0);
-		Line line3 =new Line(p5, p6);
+		Point p5 	= new Point(0, 10);
+		Point p6 	= new Point(10, 0);
+		Line line3 	= new Line(p5, p6);
 		
 		if (isTriangle(line1, line2, line3)){
 			System.out.println("The three lines make a triangle");

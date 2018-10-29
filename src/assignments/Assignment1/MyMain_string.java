@@ -1,3 +1,8 @@
+/**
+ * @author Daniel Nucci - 100655384
+ * @version October 13th, 2018
+ */
+
 package assignments.Assignment1;
 
 public class MyMain_string {
@@ -9,7 +14,7 @@ public class MyMain_string {
 		phrase2.removeUnderscores();
 		StringManipulation phrase3 = new StringManipulation("max_grade_in_class");
 		phrase3.removeUnderscores();
-		
+
 		System.out.println(phrase1.getcamelCasePhrase());
 		System.out.println(phrase2.getcamelCasePhrase());
 		System.out.println(phrase3.getcamelCasePhrase());
