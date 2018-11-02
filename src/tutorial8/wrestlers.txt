@@ -1,0 +1,4 @@
+"Randy Savage", 25
+"The Undertaker", 25
+"Steve Austin", 25
+"John Cena", 25
