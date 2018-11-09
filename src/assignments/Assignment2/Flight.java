@@ -5,7 +5,6 @@
  
 package assignments.Assignment2;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -21,10 +20,10 @@ public class Flight {
     Airport arrivalAirport;             // Flight arrivalAirport
     Aircraft aircraft;                  // Flight aircraft
 
-    public Flight(String id, Date departureTime, Date arrivalTime, Airport departureAirport, Airport arrivalAirport,Aircraft aircraft) {
+    public Flight(String id, Date departureTime, Date arrivalTime, Airport departureAirport, Airport arrivalAirport, Aircraft aircraft) {
         this.id = id;
-        this.departureTime.equals(departureTime);
-        this.arrivalTime.equals(arrivalTime);
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
         this.aircraft= aircraft;

@@ -5,8 +5,6 @@
  
 package assignments.Assignment2;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author 100466561

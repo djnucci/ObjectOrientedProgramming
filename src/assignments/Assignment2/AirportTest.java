@@ -32,7 +32,7 @@ public class AirportTest {
 	   
 	   //instantiate objects from Pilots class
 	   Pilots johnSmith = new Pilots ("John Smith",540,"Captain");
-	   Pilots SarahEric = new Pilots ("Sarah Eric",651,"C`oPilot");
+	   Pilots SarahEric = new Pilots ("Sarah Eric",651,"CoPilot");
 	   Pilots monnaKam = new Pilots ("Monna Kam",785,"navigator");
 	 	   
       //instantiate objects from Aircraft class	
@@ -54,6 +54,14 @@ public class AirportTest {
 	ArrayList<Aircraft> aircrafts= new  ArrayList<Aircraft>(); 
 	aircrafts.add(boeing787);	
 	Airline airCanad = new Airline("Air Canada",flights,aircrafts);
+	
+	airCanad.printFlightByName();
+	
+	ArrayList<Pilots> arr = airCanad.pilotsWorkingForAirlines(540);
+	
+	for (Pilots pilot : arr) {
+		System.out.println(pilot.getName());
+	}
     
   }  
     

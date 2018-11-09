@@ -19,6 +19,15 @@ public class Pilots {
         this.id = id;
 		this.role = role;
     }
+    
+    @Override
+    public String toString() {
+    	return this.role  + ", " +  this.name + ", " + this.id;
+    }
+    
+    public boolean isPilotForFlight(Aircraft aircraft) {
+    	return aircraft.pilots.contains(getName());
+    }
 
     public String getName() {
         return name;
