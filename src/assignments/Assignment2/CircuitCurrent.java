@@ -1,3 +1,8 @@
+ /**
+	SOFE 2710 Assignment 2 
+	@author Daniel Nucci 100655384
+ */
+
 package assignments.Assignment2;
 
 import java.io.BufferedReader;
@@ -13,16 +18,21 @@ import java.util.Scanner;
 public class CircuitCurrent {
 
 	public static void main(String[] args) throws IOException {
+		//scanner to read inputs
 		Scanner scan = new Scanner(System.in);
 		
+		//list of input values
 		ArrayList<String> inputs = new ArrayList<String>();
 		
+		//file path to where the files will be placed
 		String path = "src/assignments/Assignment2/";
 		BufferedWriter bw = new BufferedWriter(new FileWriter(path + "forwardCurrent.txt"));
 		
+		//ask for input
 		System.out.println("Please enter the name of the file you would like to read from: ");
 		path += scan.nextLine();
 		
+		//try to populate the input array
 		try{
         	BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         	inputs = readLineByLine(br);
@@ -31,8 +41,7 @@ public class CircuitCurrent {
             System.out.println("Unable to open file: '" +  path + "'");                
         }
 		
-		
-		
+		//modify the inputs to see if there is a negative current
 		for (int i = 0; i < inputs.size(); i++) {
 			String[] arr = inputs.get(i).split(" ");
 			try {
@@ -46,9 +55,11 @@ public class CircuitCurrent {
 				resistance = 1 / resistance;
 				current = voltage / resistance;
 										
+				//if a negative current print to console
 				if (current < 0) {
 					System.out.println(voltage + " " + resistor[0] + " " + resistor[1] + " " + resistor[2] + " " + resistor[3]);
 				}
+				//else print to the file
 				else {
 					bw.write(voltage + " " + resistor[0] + " " + resistor[1] + " " + resistor[2] + " " + resistor[3] + "\n");
 				}
@@ -58,10 +69,17 @@ public class CircuitCurrent {
 			}
 		}
 		
+		//close all streams
 		scan.close();
 		bw.close();
 	}
 
+	/**
+	 * Reads a text file line by line
+	 * @param BufferedReader reader - the reader object
+	 * @return ArrayList<String> list - a line by line read version of the file (.size() = number of lines in the file)
+	 * @throws IOException
+	 */
 	public static ArrayList<String> readLineByLine(BufferedReader reader)throws IOException {
     	String input = "";
     	ArrayList<String> list = new ArrayList<String>();
